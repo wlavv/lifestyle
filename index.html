@@ -1,1 +1,139 @@
-LIFE-STYLE.PT
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Life-Style | Store under construction</title>
+  <meta name="description" content="We're building Life-Style. Meanwhile, explore our other stores for home, décor, fashion, beauty and toys."/>
+  <link rel="icon" href="/logos/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/logos/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/logos/apple-touch-icon.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.life-style.pt/">
+  <meta property="og:title" content="Life-Style | Store under construction">
+  <meta property="og:description" content="We're building Life-Style. Meanwhile, explore our other stores for home, décor, fashion, beauty and toys.">
+  <meta property="og:image" content="https://www.life-style.pt/logos/11w_1200x630.webp">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.life-style.pt/">
+  <meta name="twitter:title" content="Life-Style | Store under construction">
+  <meta name="twitter:description" content="We're building Life-Style. Meanwhile, explore our other stores for home, décor, fashion, beauty and toys.">
+  <meta name="twitter:image" content="https://www.life-style.pt/logos/11w_1200x630.webp">
+  <style>
+    :root{ --bg:#FFFFFF; --fg:#0f172a; --accent:#d4af37; --muted:#6b7280; --grid:#f1e6c2; --glow:rgba(212,175,55,.10);
+    --display:"Playfair Display", ui-sans-serif, system-ui, Segoe UI, Roboto, Arial; --text: ui-sans-serif, system-ui, Segoe UI, Roboto, Arial; }
+    *{box-sizing:border-box}
+    html,body{min-height:100%}
+    body{
+      margin:0; font-family:var(--text); color:var(--fg);
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+        radial-gradient(800px 800px at 15% 20%, var(--glow), transparent),
+    radial-gradient(1000px 1000px at 85% 75%, rgba(212,175,55,.08), transparent);
+      background-size: 40px 40px, 40px 40px, auto;
+      background-repeat: repeat, repeat, no-repeat;
+    }
+    header{max-width:1140px; margin:auto; padding:18px 16px; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:8px; text-align:center}
+    .logo{font-family:var(--display); font-weight:800; letter-spacing:.5px; font-size:2rem}
+    .hero{max-width:800px; margin:60px auto; padding:0 16px; text-align:center}
+    .hero h1{font-family:var(--display); font-size:clamp(28px,6vw,52px); margin:.5rem 0}
+    .hero p{max-width:60ch; margin:auto; font-size:1.1rem}
+    .stores{max-width:1140px; margin:60px auto; padding:0 16px; display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:20px}
+    .store-card{background: #ffffff;  border:1px solid #ede9d5; border-radius:16px; padding:18px; backdrop-filter: blur(6px); text-align:center; text-decoration:none; color:var(--fg); display:flex; flex-direction:column; gap:10px; align-items:center; justify-content:center; min-height: 190px;}
+    .store-card:hover{border-color:var(--accent)}
+    .store-card h3{margin:8px 0 4px; font-family:var(--display); font-size:1.125rem}
+    .store-card p{margin:0; font-size:.95rem; color:var(--muted); line-height:1.35}
+    .logo-slot{width:100%; aspect-ratio: 5 / 5; display:grid; place-items:center}
+    .logo-slot img{max-width: 120px; width:100%; height:100%; object-fit: contain; display:block; margin:0 auto;}
+    footer{max-width:1140px; margin:44px auto 24px; padding:0 16px; text-align:center; color:var(--muted); font-size:14px}
+    @media (max-width: 1200px){ .stores{grid-template-columns:repeat(5,1fr)} }
+    @media (max-width: 1024px){ .stores{grid-template-columns:repeat(3,1fr)} }
+    @media (max-width: 768px){ .stores{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width: 480px){ .stores{grid-template-columns:1fr} .logo{font-size:1.5rem} .hero h1{font-size:1.8rem} }
+    .sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">LIFE-STYLE</div>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>We're building Life-Style</h1>
+        <p>Our store is under construction. <br>Meanwhile, explore our other stores.</p>
+      </div>
+    </section>
+    <section id="stores" class="stores" aria-labelledby="stores-heading">
+      <h2 id="stores-heading" class="sr-only">Our other stores</h2>
+
+        <a class="store-card" href="https://tcg-collectors.com" target="_blank" rel="noopener">
+          <div class="logo-slot">
+            <img src="/logos/4w.webp" alt="TCG-Collectors logo" width="200" height="200" decoding="async" fetchpriority="high">
+          </div>
+          <div>
+            <h3>TCG-Collectors</h3>
+            <p>For TCG collectors and enthusiasts.</p>
+          </div>
+        </a>
+
+        <a class="store-card" href="https://2play4fun.com" target="_blank" rel="noopener">
+          <div class="logo-slot">
+            <img src="/logos/7w.webp" alt="2Play4Fun logo" width="200" height="200" decoding="async" loading="lazy">
+          </div>
+          <div>
+            <h3>2Play4Fun</h3>
+            <p>Creative, educational toys for all ages.</p>
+          </div>
+        </a>
+
+        <a class="store-card" href="https://as-yourself.com" target="_blank" rel="noopener">
+          <div class="logo-slot">
+            <img src="/logos/8w.webp" alt="As-Yourself logo" width="200" height="200" decoding="async" loading="lazy">
+          </div>
+          <div>
+            <h3>As-Yourself</h3>
+            <p>Simple, effective skincare with conscious ingredients.</p>
+          </div>
+        </a>
+
+        <a class="store-card" href="https://casual-vibes.com" target="_blank" rel="noopener">
+          <div class="logo-slot">
+            <img src="/logos/9w.webp" alt="Casual-Vibes logo" width="200" height="200" decoding="async" loading="lazy">
+          </div>
+          <div>
+            <h3>Casual-Vibes</h3>
+            <p>Light, versatile daily wear.</p>
+          </div>
+        </a>
+
+        <a class="store-card" href="https://world-decor.com" target="_blank" rel="noopener">
+          <div class="logo-slot">
+            <img src="/logos/10w.webp" alt="World-Decor logo" width="200" height="200" decoding="async" loading="lazy">
+          </div>
+          <div>
+            <h3>World-Decor</h3>
+            <p>Decor with soul: wood, linen and ceramics.</p>
+          </div>
+        </a>
+
+        <a class="store-card" href="https://www.innovatech-zone.com" target="_blank" rel="noopener">
+          <div class="logo-slot">
+            <img src="/logos/11w.webp" alt="Innovatech-Zone logo" width="200" height="200" decoding="async" loading="lazy">
+          </div>
+          <div>
+            <h3>Innovatech-Zone</h3>
+            <p>Tech accessories for modern life.</p>
+          </div>
+        </a>
+    </section>
+  </main>
+  <footer>
+    <span>© <span id="y6"></span> Life-Style</span>
+  </footer>
+  <script>document.getElementById('y6').textContent=new Date().getFullYear()</script>
+</body>
+</html>
