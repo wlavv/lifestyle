@@ -17,7 +17,6 @@
   <meta property="og:url" content="https://www.life-style.pt/">
   <meta property="og:title" content="Life-Style | Store under construction">
   <meta property="og:description" content="We're building Life-Style. Meanwhile, explore our other stores for home, décor, fashion, beauty and toys.">
-  <!-- Se tiveres uma og-image específica da marca, coloca-a aqui -->
   <meta property="og:image" content="https://www.life-style.pt/logos/og-image.webp">
 
   <!-- Twitter -->
@@ -29,55 +28,94 @@
 
   <style>
     :root{
-      --bg:#ffffff; --fg:#0f172a; --muted:#6b7280; --gold:#d4af37;
+      --bg:#fff; --fg:#0f172a; --muted:#6b7280;
+      --gold:#d4af37; --gold-200:#f3e8c8; --gold-300:#e7dcc0;
       --halo1: rgba(212,175,55,.10); --halo2: rgba(212,175,55,.06);
       --sans: ui-sans-serif, system-ui, Segoe UI, Roboto, Arial;
+      --serif: ui-serif, Georgia, "Times New Roman", serif;
     }
     *{box-sizing:border-box}
     html,body{min-height:100%}
     body{
       margin:0; color:var(--fg); font-family:var(--sans);
       background:
-        radial-gradient(700px 700px at 15% 20%, var(--halo1), transparent),
-        radial-gradient(900px 900px at 85% 75%, var(--halo2), transparent),
-        #fff;
+        radial-gradient(800px 800px at 15% 18%, var(--halo1), transparent),
+        radial-gradient(1000px 1000px at 85% 78%, var(--halo2), transparent),
+        var(--bg);
     }
-    .wrap{max-width:1100px; margin:0 auto; padding:24px 16px}
-    header{display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
-    .mark{width:28px; height:28px; border-radius:50%; border:2px solid var(--gold); position:relative}
-    .mark::after{content:""; position:absolute; inset:6px; border-radius:50%; background:linear-gradient(135deg, var(--gold), #fff3b0)}
-    .badge{border:1px solid #e7e5e4; border-radius:999px; padding:6px 10px; background:#fff}
 
-    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:22px; align-items:center; margin:32px 0}
-    .hero h1{font-size:clamp(30px,6vw,56px); margin:.5rem 0}
-    .hero p{max-width:60ch; color:var(--muted); margin:0}
+    .wrap{max-width:1160px; margin:0 auto; padding:28px 20px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+    .seal{width:34px; height:34px; border-radius:50%; border:2px solid var(--gold); position:relative}
+    .seal::after{content:""; position:absolute; inset:6px; border-radius:50%;
+      background:linear-gradient(135deg, var(--gold), #fff3b0)}
+    .chip{border:1px solid var(--gold-300); border-radius:999px; padding:6px 12px; background:#fff; font-weight:600}
 
-    /* Hero art: golden animated lines */
-    .hero-art{width:100%; max-width:720px; height:auto}
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; margin:46px 0 12px}
+    .eyebrow{font-variant-caps:all-small-caps; letter-spacing:.14em; color:#8c7a46}
+    h1{font-family:var(--serif); font-weight:700; font-size:clamp(34px,6vw,60px); line-height:1.06; margin:.4rem 0 .7rem}
+    .lead{max-width:66ch; color:var(--muted); font-size:18px}
+
+    /* Golden animated lines */
+    .hero-art{width:100%; max-width:780px; height:auto}
     .wave{stroke-dasharray:1200; stroke-dashoffset:1200; animation:wave 3.6s ease-in-out forwards}
-    .wave:nth-of-type(2){animation-delay:.25s}
+    .wave:nth-of-type(2){animation-delay:.28s}
     .halo{opacity:.12}
     @keyframes wave{to{stroke-dashoffset:0}}
-    @media (prefers-reduced-motion:reduce){
-      .wave{animation:none}
+    @media (prefers-reduced-motion:reduce){.wave{animation:none}}
+
+    /* Divider */
+    .divider{
+      margin:64px auto 28px; height:1px; width:min(100%, 840px);
+      background:linear-gradient(90deg, transparent, rgba(212,175,55,.55), transparent);
+      border:none;
     }
 
-    /* Stores list */
-    .stores{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:16px}
-    .store{display:flex; gap:10px; align-items:center; text-decoration:none; color:inherit;
-           border:1px solid #ede9d5; border-radius:12px; background:#fff; padding:10px}
-    .store img{width:56px; height:56px; object-fit:contain; display:block}
-    .store p{margin:2px 0 0; color:var(--muted); font-size:13px}
+    /* Group section — premium cards */
+    .group-head{display:flex; align-items:end; justify-content:space-between; gap:12px; margin:0 0 18px}
+    .group-title{font-family:var(--serif); font-size:24px; margin:0}
+    .brandgrid{
+      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px;
+    }
+    .brandcard{
+      text-decoration:none; color:inherit; background:#fff;
+      border:1px solid var(--gold-300); border-radius:18px;
+      padding:22px 18px; display:flex; flex-direction:column; align-items:center;
+      transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      min-height:230px;
+    }
+    .brandcard:hover{
+      transform:translateY(-4px);
+      border-color:var(--gold);
+      box-shadow:0 10px 36px rgba(212,175,55,.18);
+    }
 
-    footer{text-align:center; color:var(--muted); font-size:14px; margin:40px 0 16px}
+    .logo-plate{
+      width:120px; aspect-ratio:1; display:grid; place-items:center;
+      background:linear-gradient(180deg, #fff, #fffaf0);
+      border:1px solid var(--gold-200); border-radius:14px; margin-bottom:14px;
+    }
+    .logo-plate img{width:100px; height:100px; object-fit:contain; display:block}
 
-    @media (max-width: 900px){
+    .brandcard h3{
+      font-family:var(--serif); font-size:20px; margin:.2rem 0 .3rem; letter-spacing:.2px
+    }
+    .brandcard p{
+      margin:0; color:var(--muted); text-align:center; max-width:26ch; font-size:14px; line-height:1.35
+    }
+
+    footer{margin:60px 0 18px; color:var(--muted); font-size:14px; text-align:center}
+
+    @media (max-width: 980px){
       .hero{grid-template-columns:1fr}
-      .stores{grid-template-columns:1fr}
+      .brandgrid{grid-template-columns:repeat(2, minmax(0,1fr))}
+    }
+    @media (max-width: 560px){
+      .brandgrid{grid-template-columns:1fr}
     }
 
-    /* A11y */
+    /* a11y util */
     .sr-only{
       position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
       clip:rect(0,0,0,0); white-space:nowrap; border:0;
@@ -87,15 +125,16 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand"><span class="mark" aria-hidden="true"></span> Life-Style</div>
-      <span class="badge">Coming soon</span>
+      <div class="brand"><span class="seal" aria-hidden="true"></span> Life-Style</div>
+      <span class="chip">Coming soon</span>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div>
+          <div class="eyebrow">Curated & Calm</div>
           <h1 id="hero-title">Timeless pieces for everyday living</h1>
-          <p>We’re crafting a calm selection of home & wellness essentials with natural materials and thoughtful details. While we prepare the collection, discover our other stores below.</p>
+          <p class="lead">We’re curating home & wellness essentials with natural materials, soft palettes and thoughtful details. While we prepare the collection, discover our other stores below.</p>
         </div>
 
         <!-- Golden animated lines (SVG) -->
@@ -107,8 +146,8 @@
             </linearGradient>
           </defs>
           <g fill="none" stroke="url(#gold)" stroke-width="2" stroke-linecap="round">
-            <path class="wave" d="M-40,210 C120,130 220,290 380,210 S640,130 800,210"/>
-            <path class="wave" d="M-40,240 C120,160 220,320 380,240 S640,160 800,240"/>
+            <path class="wave" d="M-60,210 C120,130 220,290 380,210 S640,130 820,210"/>
+            <path class="wave" d="M-60,240 C120,160 220,320 380,240 S640,160 820,240"/>
           </g>
           <g class="halo" fill="url(#gold)">
             <circle cx="110" cy="70" r="38"/>
@@ -117,32 +156,60 @@
         </svg>
       </section>
 
-      <section aria-labelledby="stores-heading">
-        <h2 id="stores-heading" class="sr-only">Our other stores</h2>
-        <div class="stores">
-          <a class="store" href="https://tcg-collectors.com" target="_blank" rel="noopener">
-            <img src="/logos/4w.webp" alt="TCG-Collectors logo" width="56" height="56" loading="lazy">
-            <div><strong>TCG-Collectors</strong><p>For TCG collectors and enthusiasts.</p></div>
+      <hr class="divider" aria-hidden="true"/>
+
+      <section aria-labelledby="group-title">
+        <div class="group-head">
+          <h2 id="group-title" class="group-title">Our group</h2>
+        </div>
+
+        <div class="brandgrid">
+          <a class="brandcard" href="https://tcg-collectors.com" target="_blank" rel="noopener">
+            <div class="logo-plate">
+              <img src="/logos/4w.webp" alt="TCG-Collectors logo" width="100" height="100" loading="lazy">
+            </div>
+            <h3>TCG-Collectors</h3>
+            <p>For TCG collectors and enthusiasts.</p>
           </a>
-          <a class="store" href="https://2play4fun.com" target="_blank" rel="noopener">
-            <img src="/logos/7w.webp" alt="2Play4Fun logo" width="56" height="56" loading="lazy">
-            <div><strong>2Play4Fun</strong><p>Creative, educational toys for all ages.</p></div>
+
+          <a class="brandcard" href="https://2play4fun.com" target="_blank" rel="noopener">
+            <div class="logo-plate">
+              <img src="/logos/7w.webp" alt="2Play4Fun logo" width="100" height="100" loading="lazy">
+            </div>
+            <h3>2Play4Fun</h3>
+            <p>Creative, educational toys for all ages.</p>
           </a>
-          <a class="store" href="https://as-yourself.com" target="_blank" rel="noopener">
-            <img src="/logos/8w.webp" alt="As-Yourself logo" width="56" height="56" loading="lazy">
-            <div><strong>As-Yourself</strong><p>Simple, effective skincare with conscious ingredients.</p></div>
+
+          <a class="brandcard" href="https://as-yourself.com" target="_blank" rel="noopener">
+            <div class="logo-plate">
+              <img src="/logos/8w.webp" alt="As-Yourself logo" width="100" height="100" loading="lazy">
+            </div>
+            <h3>As-Yourself</h3>
+            <p>Simple, effective skincare with conscious ingredients.</p>
           </a>
-          <a class="store" href="https://casual-vibes.com" target="_blank" rel="noopener">
-            <img src="/logos/9w.webp" alt="Casual-Vibes logo" width="56" height="56" loading="lazy">
-            <div><strong>Casual-Vibes</strong><p>Light, versatile daily wear.</p></div>
+
+          <a class="brandcard" href="https://casual-vibes.com" target="_blank" rel="noopener">
+            <div class="logo-plate">
+              <img src="/logos/9w.webp" alt="Casual-Vibes logo" width="100" height="100" loading="lazy">
+            </div>
+            <h3>Casual-Vibes</h3>
+            <p>Light, versatile daily wear.</p>
           </a>
-          <a class="store" href="https://world-decor.com" target="_blank" rel="noopener">
-            <img src="/logos/10w.webp" alt="World-Decor logo" width="56" height="56" loading="lazy">
-            <div><strong>World-Decor</strong><p>Decor with soul: wood, linen and ceramics.</p></div>
+
+          <a class="brandcard" href="https://world-decor.com" target="_blank" rel="noopener">
+            <div class="logo-plate">
+              <img src="/logos/10w.webp" alt="World-Decor logo" width="100" height="100" loading="lazy">
+            </div>
+            <h3>World-Decor</h3>
+            <p>Decor with soul: wood, linen and ceramics.</p>
           </a>
-          <a class="store" href="https://www.innovatech-zone.com" target="_blank" rel="noopener">
-            <img src="/logos/11w.webp" alt="Innovatech-Zone logo" width="56" height="56" loading="lazy">
-            <div><strong>Innovatech-Zone</strong><p>Tech accessories for modern life.</p></div>
+
+          <a class="brandcard" href="https://www.innovatech-zone.com" target="_blank" rel="noopener">
+            <div class="logo-plate">
+              <img src="/logos/11w.webp" alt="Innovatech-Zone logo" width="100" height="100" loading="lazy">
+            </div>
+            <h3>Innovatech-Zone</h3>
+            <p>Tech accessories for modern life.</p>
           </a>
         </div>
       </section>
@@ -151,8 +218,6 @@
     <footer>© <span id="y"></span> Life-Style</footer>
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
