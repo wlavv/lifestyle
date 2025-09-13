@@ -1,0 +1,48 @@
+# --- PrestaShop base ---
+/admin/autoupgrade/
+/admin/backups/
+/admin/export/
+/admin/import/
+/admin/themes/default-bootstrap/lang/
+/cache/
+/config/xml/
+/download/
+/img/*
+
+.htaccess
+
+
+!/img/.htaccess
+/log/
+/mails/
+/modules/*/mails/
+/themes/*/cache/
+/themes/*/lang/
+/themes/*/pdf/
+/themes/*/translations/
+/tools/smarty/compile/
+/tools/smarty/cache/
+/translations/
+
+# --- Vendor & dependencies ---
+/vendor/
+/node_modules/
+/composer.lock
+/package-lock.json
+/yarn.lock
+
+# --- Environment & system files ---
+/.env
+/.idea/
+/.vscode/
+/nbproject/
+/*.swp
+*.bak
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# --- OS generated ---
+ehthumbs.db
+Icon?
