@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => 'localhost',
+    'database_port' => '',
+    'database_name' => 'brunofer_life_style',
+    'database_user' => 'brunofer_admin',
+    'database_password' => 'W(S6tW34!p',
+    'database_prefix' => 'psrq_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'gaawnrjnszmlmgmjbjcgfllmnowvcils3sdoyij6kgmynpkfprchmfle',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2020-09-30',
+    'locale' => 'en-US',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'yvy3cobptibcm91ztn9rpvbowr51whw29tsiadbnfapabridtbupgeaw',
+    'cookie_iv' => 'hin4zjru',
+    'new_cookie_key' => 'def00000131412ec8e0d4a2783e216fbe71c8679848128a0b11f40f7e2286a71a385bd9f02589997b20adf6b86cb1803ce6104422bfc663c64aea050ffb9e6b40e0dfd10',
+  ),
+);

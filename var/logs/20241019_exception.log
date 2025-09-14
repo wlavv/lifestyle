@@ -1,0 +1,2 @@
+*ERROR* 	v8.1.2	2024/10/19 - 15:45:43: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;lifesty4_admin&#039;@&#039;localhost&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
+*ERROR* 	v8.1.2	2024/10/19 - 15:50:12: Link to database cannot be established: SQLSTATE[HY000] [1045] Access denied for user &#039;lifesty4_admin&#039;@&#039;localhost&#039; (using password: YES) at line 119 in file classes/db/DbPDO.php
