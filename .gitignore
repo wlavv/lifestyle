@@ -65,7 +65,6 @@
 /upload/*
 !/upload/.htaccess
 
-/vendor/*
 /docs/phpdoc-sf/
 /composer.lock
 *.hot-update.js
