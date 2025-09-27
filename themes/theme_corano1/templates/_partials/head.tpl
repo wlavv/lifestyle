@@ -31,7 +31,15 @@
   <link rel="shortcut icon" type="image/x-icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
 {/block}
  <link href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" rel="stylesheet">
- <script src="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js"></script>
+
+
+{* Preload opcional (não bloqueia render) *}
+<link rel="preload" href="{$urls.theme}assets/js/jquery/3.2.1/jquery.min.js" as="script">
+
+{* jQuery com defer e caminho relativo ao tema (sem domínio), evita CORS e // duplas *}
+<script src="{$urls.theme}assets/js/jquery/3.2.1/jquery.min.js" defer></script>
+
+
 {block name='stylesheets'}
   {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}
 {/block}
