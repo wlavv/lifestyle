@@ -32,20 +32,20 @@
 {/block}
 
 {* Playfair: carregar sem bloquear (mesmo host, sem // duplas) *}
-<link rel="preload" href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" as="style">
-<link rel="stylesheet" href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css"></noscript>
+<link rel="preload" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" as="style">
+<link rel="stylesheet" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css"></noscript>
 
-<link rel="preload" href="https://life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" as="style">
-<link rel="stylesheet" href="https://life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css"></noscript>
+<link rel="preload" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" as="style">
+<link rel="stylesheet" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css"></noscript>
 
 
 {* Preload opcional (não bloqueia render) *}
-<link rel="preload" href="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js" as="script">
+<link rel="preload" href="https://www.life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js" as="script">
 
 {* jQuery com defer e caminho relativo ao tema (sem domínio), evita CORS e // duplas *}
-<script src="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js"></script>
 
 
 {block name='stylesheets'}
