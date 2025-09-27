@@ -1,33 +1,19 @@
-{* Non-blocking CSS loader com preload + media=print/onload *}
-{if isset($stylesheets)}
-  {if !empty($stylesheets.external)}
-    {foreach from=$stylesheets.external item=stylesheet}
-      {*
-        Skip se for uma das folhas que já inlinámos (Playfair/Lato/Pe Icon).
-        Como o Smarty pode estar em modo seguro (sem funções PHP), fazemos match simples por sufixo.
-      *}
-      {assign var=uri value=$stylesheet.uri}
-      {assign var=skip value=false}
-      {if substr($uri, -9) == 'Lato.css'}{assign var=skip value=true}{/if}
-      {if substr($uri, -22) == 'pe-icon-7-stroke.css'}{assign var=skip value=true}{/if}
-      {if substr($uri, -18) == 'PlayfairDisplay.css'}{assign var=skip value=true}{/if}
+{foreach $stylesheets.external as $stylesheet}
+  <link rel="stylesheet" href="{$stylesheet.uri}" type="text/css" media="{$stylesheet.media}">
+{/foreach}
 
-      {if !$skip}
-        <link rel="preload" href="{$stylesheet.uri}" as="style">
-        <link rel="stylesheet"
-              href="{$stylesheet.uri}"
-              media="print"
-              onload="this.media='{$stylesheet.media|default:'all'}'">
-        <noscript>
-          <link rel="stylesheet" href="{$stylesheet.uri}" media="{$stylesheet.media|default:'all'}">
-        </noscript>
-      {/if}
-    {/foreach}
-  {/if}
+<link rel="stylesheet" href="https://life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" type="text/css" media="all">
+{foreach $stylesheets.inline as $stylesheet}
+  <style>
+    {$stylesheet.content}
+  </style>
+{/foreach}
 
-  {if !empty($stylesheets.inline)}
-    {foreach from=$stylesheets.inline item=stylesheet}
-      <style>{$stylesheet.content nofilter}</style>
-    {/foreach}
-  {/if}
-{/if}
+<style>
+    .pos_bannerslide{ margin-bottom: 20px; }
+    
+    .search_top form button i { font-size: 21px; display: block; line-height: 0px; }
+    
+    #search_widget form i{ position: relative; padding: 0; }
+    
+</style>
