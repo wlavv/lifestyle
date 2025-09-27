@@ -31,15 +31,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
 {/block}
 
-{* Playfair: carregar sem bloquear (mesmo host, sem // duplas) *}
-<link rel="preload" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" as="style">
-<link rel="stylesheet" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css"></noscript>
-
-<link rel="preload" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" as="style">
-<link rel="stylesheet" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css"></noscript>
-
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://www.life-style.pt//themes/theme_corano1/assets/css/fonts/lato/S6u9w4BMUTPHh6UVSwiPGQ.woff2">
 
 {* Preload opcional (não bloqueia render) *}
 <link rel="preload" href="https://www.life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js" as="script">

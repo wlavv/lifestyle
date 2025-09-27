@@ -19,3 +19,12 @@
     {/foreach}
   {/if}
 {/if}
+
+{* Playfair: carregar sem bloquear (mesmo host, sem // duplas) *}
+<link rel="preload" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" as="style">
+<link rel="stylesheet" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://www.life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css"></noscript>
+
+<link rel="preload" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" as="style">
+<link rel="stylesheet" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://www.life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css"></noscript>
