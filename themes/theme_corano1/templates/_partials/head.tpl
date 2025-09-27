@@ -13,10 +13,16 @@
     <meta name="robots" content="{$page.meta.robots}">
   {/if}
 
+  {*
+    (Opcional) CSS crítico: quando quisermos voltar a inlinar,
+    criamos um template em: templates/_partials/critical-home.tpl
+    e depois descomentamos o include abaixo.
+  *}
+  {*
   {if $page.page_name == 'index'}
-    {* CSS crítico inline (acima da dobra) *}
-    <style>{include file=$urls.theme|cat:'assets/css/critical-home.css'}</style>
+    <style>{include file="_partials/critical-home.tpl"}</style>
   {/if}
+  *}
 
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}">
@@ -37,17 +43,12 @@
   <link rel="shortcut icon" type="image/x-icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
 {/block}
 
-{* ==== OTIMIZAÇÃO: remover CSS bloqueante de Playfair (inline) ==== *}
-{* Em vez de <link href="https://life-style.pt//themes/.../PlayfairDisplay.css" rel="stylesheet"> *}
-<style>
-{include file=$urls.theme|cat:'assets/css/PlayfairDisplay.css'}
-<style>{include file=$urls.theme|cat:'assets/css/Lato.css'}</style>
-<style>{include file=$urls.theme|cat:'assets/css/pe-icon-7-stroke.css'}</style>
+{* Playfair: carregar sem bloquear *}
+<link rel="preload" href="{$urls.theme}assets/css/PlayfairDisplay.css" as="style">
+<link rel="stylesheet" href="{$urls.theme}assets/css/PlayfairDisplay.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{$urls.theme}assets/css/PlayfairDisplay.css"></noscript>
 
-</style>
-
-{* ==== OTIMIZAÇÃO: jQuery não-bloqueante ==== *}
-{* Antes: <script src="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js"></script> *}
+{* jQuery em defer e sem domínio hardcoded *}
 <script src="{$urls.theme}assets/js/jquery/3.2.1/jquery.min.js" defer></script>
 
 {block name='stylesheets'}
