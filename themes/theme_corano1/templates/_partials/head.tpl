@@ -30,7 +30,15 @@
   <link rel="icon" type="image/vnd.microsoft.icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
   <link rel="shortcut icon" type="image/x-icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
 {/block}
- <link href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" rel="stylesheet">
+
+{* Playfair: carregar sem bloquear (mesmo host, sem // duplas) *}
+<link rel="preload" href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" as="style">
+<link rel="stylesheet" href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css"></noscript>
+
+<link rel="preload" href="https://life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" as="style">
+<link rel="stylesheet" href="https://life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://life-style.pt/themes/theme_corano1/assets/css/pe-icon-7-stroke.css"></noscript>
 
 
 {* Preload opcional (não bloqueia render) *}
