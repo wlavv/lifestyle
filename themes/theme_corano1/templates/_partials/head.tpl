@@ -37,7 +37,7 @@
 <link rel="preload" href="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js" as="script">
 
 {* jQuery com defer e caminho relativo ao tema (sem domínio), evita CORS e // duplas *}
-<script src="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js" defer></script>
+<script src="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js"></script>
 
 
 {block name='stylesheets'}
