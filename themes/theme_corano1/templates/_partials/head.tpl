@@ -1,27 +1,3 @@
-{**
- * 2007-2018 PrestaShop
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
- *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
- * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- * International Registered Trademark & Property of PrestaShop SA
- *}
 {block name='head_charset'}
   <meta charset="utf-8">
 {/block}
@@ -36,13 +12,19 @@
   {if $page.meta.robots !== 'index'}
     <meta name="robots" content="{$page.meta.robots}">
   {/if}
+
+  {if $page.page_name == 'index'}
+    {* CSS crítico inline (acima da dobra) *}
+    <style>{include file=$urls.theme|cat:'assets/css/critical-home.css'}</style>
+  {/if}
+
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}">
   {/if}
   {block name='head_hreflang'}
-      {foreach from=$urls.alternative_langs item=pageUrl key=code}
-            <link rel="alternate" href="{$pageUrl}" hreflang="{$code}">
-      {/foreach}
+    {foreach from=$urls.alternative_langs item=pageUrl key=code}
+      <link rel="alternate" href="{$pageUrl}" hreflang="{$code}">
+    {/foreach}
   {/block}
 {/block}
 
@@ -54,8 +36,20 @@
   <link rel="icon" type="image/vnd.microsoft.icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
   <link rel="shortcut icon" type="image/x-icon" href="{$shop.favicon}?{$shop.favicon_update_time}">
 {/block}
- <link href="https://life-style.pt//themes/theme_corano1/assets/css/PlayfairDisplay.css" rel="stylesheet">
- <script src="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js"></script>
+
+{* ==== OTIMIZAÇÃO: remover CSS bloqueante de Playfair (inline) ==== *}
+{* Em vez de <link href="https://life-style.pt//themes/.../PlayfairDisplay.css" rel="stylesheet"> *}
+<style>
+{include file=$urls.theme|cat:'assets/css/PlayfairDisplay.css'}
+<style>{include file=$urls.theme|cat:'assets/css/Lato.css'}</style>
+<style>{include file=$urls.theme|cat:'assets/css/pe-icon-7-stroke.css'}</style>
+
+</style>
+
+{* ==== OTIMIZAÇÃO: jQuery não-bloqueante ==== *}
+{* Antes: <script src="https://life-style.pt//themes/theme_corano1/assets/js/jquery/3.2.1/jquery.min.js"></script> *}
+<script src="{$urls.theme}assets/js/jquery/3.2.1/jquery.min.js" defer></script>
+
 {block name='stylesheets'}
   {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}
 {/block}
